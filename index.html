@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="parentcontainer" class="container my-4">
+        <h1 class="text-center">DONATE BLOOD SAVE LIFE</h1>
+    <div id="formcontainer" class="container">
+        <div class="childcontainer shadow" id="container1">
+            <div id="card-1" class="card border-primary mb-0" style="max-width: 18rem;">
+                <!-- <img src="images/imgq1.png" alt="" style="width: 100%; object-fit: cover;"> -->
+              </div>
+        </div>
+        <div class="childcontainer shadow" id="container2">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card form-card">
+                        <div class="card-body">
+                          <h5 class="card-title">Personal Details</h5>
+                          <form onsubmit="return validatepdetails()">
+                            <div class="mb-1">
+                                <label class="form-label" for="donername">Doner's Name</label>
+                                <input class="form-control form-control-sm" type="text" name="txtdonername" id="donername">
+                                <span id="errdonername" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label" for="dob">Date Of Birth</label>
+                                <input class="form-control form-control-sm" type="date" name="txtdob" id="dob" required>
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label" for="lblgender">Gender</label><br>
+                                <input class="form-check-input" type="radio" name="radiogender" id="radiomale" required>
+                                <label class="form-check-label" for="radiomale">male</label>
+                                <input class="form-check-input" type="radio" name="radiogender" id="radiofemale" required>
+                                <label class="form-check-label" for="radiofemale">female</label>
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-control form-control-sm" type="email" name="txtemail" id="email">
+                                <span id="erremail" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="mobile">Mobile Number</label>
+                                <input class="form-control form-control-sm" type="text" name="txtmobile" id="mobile">
+                                <span id="errmobile" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="mb-0 my-0">
+                                <input type="submit" id="btnpdetails" class="btn btn-outline-primary" style="width: 100%;">
+                            </div>
+                          </form>                      
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card form-card">
+                        <div class="card-body">
+                          <h5 class="card-title">Address Details</h5>
+                          <form onsubmit="return validateadetails()">
+                            <div class="mb-1">
+                                <label class="form-label" for="address">Address</label>
+                                <textarea name="txtaddress" id="address" cols="30" rows="3" style="width: 100%; resize: none;" required></textarea>
+                            </div>
+                            <div class="mb-1 dropdown">
+                                <label class="form-label" for="state">State</label>
+                                <select class="form-select" id="state" name="country-state">
+                                    <option value="AN">Andaman and Nicobar Islands</option>
+                                    <option value="AP">Andhra Pradesh</option>
+                                    <option value="AR">Arunachal Pradesh</option>
+                                    <option value="AS">Assam</option>
+                                    <option value="BR">Bihar</option>
+                                    <option value="CH">Chandigarh</option>
+                                    <option value="CT">Chhattisgarh</option>
+                                    <option value="DN">Dadra and Nagar Haveli</option>
+                                    <option value="DD">Daman and Diu</option>
+                                    <option value="DL">Delhi</option>
+                                    <option value="GA">Goa</option>
+                                    <option value="GJ">Gujarat</option>
+                                    <option value="HR">Haryana</option>
+                                    <option value="HP">Himachal Pradesh</option>
+                                    <option value="JK">Jammu and Kashmir</option>
+                                    <option value="JH">Jharkhand</option>
+                                    <option value="KA">Karnataka</option>
+                                    <option value="KL">Kerala</option>
+                                    <option value="LA">Ladakh</option>
+                                    <option value="LD">Lakshadweep</option>
+                                    <option value="MP">Madhya Pradesh</option>
+                                    <option value="MH">Maharashtra</option>
+                                    <option value="MN">Manipur</option>
+                                    <option value="ML">Meghalaya</option>
+                                    <option value="MZ">Mizoram</option>
+                                    <option value="NL">Nagaland</option>
+                                    <option value="OR">Odisha</option>
+                                    <option value="PY">Puducherry</option>
+                                    <option value="PB">Punjab</option>
+                                    <option value="RJ">Rajasthan</option>
+                                    <option value="SK">Sikkim</option>
+                                    <option value="TN">Tamil Nadu</option>
+                                    <option value="TG">Telangana</option>
+                                    <option value="TR">Tripura</option>
+                                    <option value="UP">Uttar Pradesh</option>
+                                    <option value="UT">Uttarakhand</option>
+                                    <option value="WB">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label" for="district">District</label>
+                                <input class="form-control form-control-sm" type="text" name="txtdistrict" id="district" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="pincode">Pin Code</label>
+                                <input class="form-control form-control-sm" type="text" name="txtpincode" id="pincode" required>
+                                <span id="errpincode" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="mb-0 my-0">
+                                <input type="submit" id="btnadetails" class="btn btn-outline-primary" style="width: 100%;">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
+                    <div class="card form-card">
+                        <div class="card-body">
+                          <h5 class="card-title">Other Details</h5>
+                          <form onsubmit="return validateodetails()">
+                            <div class="mb-3">
+                                <label class="form-label" for="lblprevdonate">Have You Donated Blood Previously?</label><br>
+                                <input class="form-check-input" type="radio" name="radiochooseb" id="radioyes" required>
+                                <label class="form-check-label" for="radioyes">yes</label>
+                                <input class="form-check-input" type="radio" name="radiochooseb" id="radiono" required>
+                                <label class="form-check-label" for="radiono">no</label>
+                            </div>
+                            <div class="mb-3 dropdown">
+                                <label class="form-label" for="bloodgroup">Blood Group</label>
+                                <select class="form-select" id="bloodgroup" name="selectbloodgroup">
+                                    <option>A Positive</option>
+                                    <option>A Negative</option>
+                                    <option>A Unknown</option>
+                                    <option>B Positive</option>
+                                    <option>B Negative</option>
+                                    <option>B Unknown</option>
+                                    <option>AB Positive</option>
+                                    <option>AB Negative</option>
+                                    <option>AB Unknown</option>
+                                    <option>O Positive</option>
+                                    <option>O Negative</option>
+                                    <option>O Unknown</option>
+                                    <option>Unknown</option>
+                                </select>
+                            </div>
+                            <div class="mb-1">
+                                <label class="form-label" for="weight">Weight in KG</label>
+                                <input class="form-control form-control-sm" type="text" name="txtweight" id="weight" required>
+                                <span id="errweight" class="text-danger font-weight-bold"></span>
+                            </div>
+                            <div class="mb-5">
+                                <label class="form-label" for="lblhaemocount">Do You Know Your Haemoglobin Count?</label><br>
+                                <input class="form-check-input" type="radio" name="radiochooseh" id="radioyes" required>
+                                <label class="form-check-label" for="radioyes">yes</label>
+                                <input class="form-check-input" type="radio" name="radiochooseh" id="radiono" required>
+                                <label class="form-check-label" for="radiono">no</label>
+                            </div>
+                            <div class="mb-0">
+                                <input type="submit" id="btnodetails" class="btn btn-outline-primary" style="width: 100%;">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Javascript and bootstrap js files -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>
+</html>

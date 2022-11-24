@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#parentcontainer{
+    border: 2px solid bisque;
+    box-shadow: 4px 4px 5px wheat;
+    height: 90vh;
+    padding-top: 2rem;
+    /* background-color: lemonchiffon; */
+    border-radius: 10px;
+}
+#formcontainer{
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    /* height: 70%; */
+}
+.childcontainer{
+    /* border: 1px solid blue; */
+    margin: 2px;
+    /* width: 100%; */
+}
+#container1{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 30rem;
+}
+#container1 .card{
+    background-color: transparent;
+}
+#container1 .mb-0{
+    height: 100%;
+    width: 100%;
+    background-image: url("images/imgq1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    animation: changeimageup 50s linear infinite;
+}
+@keyframes changeimageup {
+    0%   {background-image: url("images/imgq1.png");}
+    20%  {background-image: url("images/imgq2.jpg");}
+    40%  {background-image: url("images/imgq3.jpg");}
+    60%  {background-image: url("images/imgq4.jpg");}
+    80%  {background-image: url("images/imgq5.jpg");}
+    100% {background-image: url("images/imgq6.jpg");}
+  }
+/* #container1 .mb-0{
+    height: 100%;
+    width: 100%;
+    background-image: url("images/imgq4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    animation: changeimagedown 20s linear infinite alternate;
+}
+@keyframes changeimagedown {
+    0%   {background-image: url("images/imgq4.jpg");}
+    50%  {background-image: url("images/imgq5.jpg");}
+    100% {background-image: url("images/imgq6.jpg");}
+  } */
+#container2{
+    width: 80%;
+    /* align-self: center; */
+}
+#container2 .card{
+    background-color: transparent;
+}
+div.row .form-card{
+    height: 30rem;
+}
